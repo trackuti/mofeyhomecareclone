@@ -1,52 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employment Application Form Preview</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f4f6f9;
+            background-color: white;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
+
+        header {
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            border-bottom: 2px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        h2 {
+
+        header img {
+            height: 100px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #6b38f4;
+        }
+
+        /* Main banner styling */
+
+        .banner {
+            position: relative;
+            background-image: url(/images/applyonline.jpg);
+            /* Replace with the actual image URL */
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        /* Application section styling */
+
+        .application-section {
+            padding: 40px 20px;
             text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .application-section h2 {
+            font-size: 2rem;
             color: #333;
         }
-        p {
-            color: #555;
+
+        .application-section p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
         }
+
+        /* Responsive design */
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .banner h1 {
+                font-size: 2rem;
+            }
+
+            .application-section {
+                padding: 20px;
+            }
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
-        th, td {
+
+        th,
+        td {
             padding: 12px;
             border: 1px solid #e0e0e0;
             text-align: left;
         }
+
         th {
             background-color: #007bff;
             color: white;
         }
+
         td {
             background-color: #f9f9f9;
         }
+
         .required:after {
             content: " *";
             color: red;
         }
+
         input[type="text"],
         input[type="email"],
         input[type="tel"],
@@ -58,6 +145,7 @@
             border-radius: 4px;
             transition: border-color 0.3s;
         }
+
         input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="tel"]:focus,
@@ -66,17 +154,21 @@
             border-color: #007bff;
             outline: none;
         }
+
         input[type="radio"],
         input[type="checkbox"] {
             margin-right: 10px;
         }
+
         .signature-upload {
             display: flex;
             align-items: center;
         }
+
         .signature-upload input {
             margin-right: 10px;
         }
+
         .submit-btn {
             background-color: #007bff;
             color: white;
@@ -87,381 +179,324 @@
             font-size: 16px;
             transition: background-color 0.3s;
         }
+
         .submit-btn:hover {
             background-color: #0056b3;
         }
+
+        .applynow-text {
+            width: 80%;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+        }
+
+        header {
+            background: white;
+            border-bottom: 2px solid #ddd;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 100px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #6b38f4;
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                position: absolute;
+                top: 70px;
+                /* Adjust based on the header height */
+                right: 0;
+                background-color: white;
+                width: 100%;
+                display: none;
+                /* Hide menu by default */
+                border-top: 1px solid #ddd;
+                padding: 10px 0;
+            }
+
+            nav ul li {
+                text-align: center;
+            }
+
+            .banner h1 {
+                font-size: 2rem;
+            }
+
+            .application-section {
+                padding: 20px;
+            }
+        }
+
+        nav ul.active {
+            display: flex;
+            /* Show menu when active */
+        }
+
+        /* Styling for the active state when the hamburger is clicked */
+        .hamburger.active span {
+            background-color: #6b38f4;
+            transform: rotate(45deg);
+            transition: background-color 0.3s;
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
     </style>
 </head>
+
 <body>
+    <header>
+        <img src="/images/sitelogo.png" alt="Logo" height="100">
+        <!-- Replace with actual logo URL -->
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="applyv.html">Apply Online</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="container">
-    <h2>Employment Application Form Preview</h2>
-    <p><strong>Application For Employment: Mofey Home Care LLC</strong></p>
-    <p>Mofey Home Care LLC is an equal Opportunity Employer. Employment offers are made on the basis of qualifications, and without regard to race, sex, religion, national or ethnic origin, disability, age, veteran status, or sexual orientations.</p>
-    <p>Please complete this employment application form for consideration. We strongly suggest proofreading your application before clicking the submit button. We look forward to working with you!</p>
 
-    <table>
-        <tr>
-            <th colspan="2">PERSONAL INFORMATION</th>
-        </tr>
-        <tr>
-            <td class="required">First Name</td>
-            <td><input type="text" placeholder="First Name"></td>
-        </tr>
-        <tr>
-            <td>Middle Name</td>
-            <td><input type="text" placeholder="Middle Name"></td>
-        </tr>
-        <tr>
-            <td class="required">Last Name</td>
-            <td><input type="text" placeholder="Last Name"></td>
-        </tr>
-        <tr>
-            <td>Other names Used</td>
-            <td><input type="text" placeholder="Other names Used"></td>
-        </tr>
-        <tr>
-            <td class="required">Address</td>
-            <td><input type="text" placeholder="Mailing Address"></td>
-        </tr>
-        <tr>
-            <td class="required">City</td>
-            <td><input type="text" placeholder="City"></td>
-        </tr>
-        <tr>
-            <td class="required">State / Province</td>
-            <td>
-                <select>
-                    <option>Indiana</option>
-                    <!-- Add more states as needed -->
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">Postal / Zip Code</td>
-            <td><input type="text" placeholder="Postal / Zip Code"></td>
-        </tr>
-        <tr>
-            <td class="required">Email Address</td>
-            <td><input type="email" placeholder="Email Address"></td>
-        </tr>
-        <tr>
-            <td class="required">Phone Number</td>
-            <td><input type="tel" placeholder="Home Phone"></td>
-        </tr>
-        <tr>
-            <td class="required">Are you legally entitled to work in the U.S.?</td>
-            <td>
-                <label><input type="radio" name="workEligibility"> Yes</label>
-                <label><input type="radio" name="workEligibility"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">Have you ever been convicted of a felony?</td>
-            <td>
-                <label><input type="radio" name="felonyConviction"> Yes</label>
-                <label><input type="radio" name="felonyConviction"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">Are you 18 years of age or older?</td>
-            <td>
-                <label><input type="radio" name="ageEligibility"> Yes</label>
-                <label><input type="radio" name="ageEligibility"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">Are you currently employed?</td>
-            <td>
-                <label><input type="radio" name="currentlyEmployed"> Yes</label>
-                <label><input type="radio" name="currentlyEmployed"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">Have you ever been employed by Mofey Home Care LLC?</td>
-            <td>
-                <label><input type="radio" name="previousEmployment"> Yes</label>
-                <label><input type="radio" name="previousEmployment"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">Are you related to any current Mofey Home Care LLC Employee?</td>
-            <td>
-                <label><input type="radio" name="employeeRelation"> Yes</label>
-                <label><input type="radio" name="employeeRelation"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">If required for position, do you have a valid Driver License?</td>
-            <td>
-                <label><input type="radio" name="driverLicense"> Yes</label>
-                <label><input type="radio" name="driverLicense"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">If required for position, do you have a valid Proof of Insurance?</td>
-            <td>
-                <label><input type="radio" name="insuranceProof"> Yes</label>
-                <label><input type="radio" name="insuranceProof"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">How did you learn about this employment opportunity?</td>
-            <td>
-                <label><input type="checkbox"> Job Bulletin posting / walk</label><br>
-                <label><input type="checkbox"> Depart. Of labor</label><br>
-                <label><input type="checkbox"> Website</label><br>
-                <label><input type="checkbox"> Referral by employee</label><br>
-                <label><input type="checkbox"> Other</label>
-            </td>
-        </tr>
-        <tr>
-            <th colspan="2">POSITION</th>
-        </tr>
-        <tr>
-            <td class="required">Position Applying For</td>
-            <td>
-                <label><input type="radio" name="position"> CNA</label>
-                <label><input type="radio" name="position"> HHA</label>
-                <label><input type="radio" name="position"> CAREGIVER</label>
-                <label><input type="radio" name="position"> Administration</label>
-                <label><input type="radio" name="position"> Office | Clerical</label>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">Date Available</td>
-            <td><input type="date"></td>
-        </tr>
-        <tr>
-            <td class="required">Applying For</td>
-            <td>
-                <label><input type="checkbox"> Part-Time</label>
-                <label><input type="checkbox"> Full-Time</label>
-                <label><input type="checkbox"> Temporary</label>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">Days Available to Work</td>
-            <td>
-                <label><input type="checkbox"> Monday</label>
-                <label><input type="checkbox"> Tuesday</label>
-                <label><input type="checkbox"> Wednesday</label>
-                <label><input type="checkbox"> Thursday</label>
-                <label><input type="checkbox"> Friday</label>
-                <label><input type="checkbox"> Saturday</label>
-                <label><input type="checkbox"> Sunday</label>
-            </td>
-        </tr>
-        <tr>
-            <td class="required">Are you able to perform the essential functions of the job you are applying for, with or without reasonable accommodation?</td>
-            <td>
-                <label><input type="radio" name="accommodation"> Yes</label>
-                <label><input type="radio" name="accommodation"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <th colspan="2">EDUCATION AND TRAINING</th>
-        </tr>
-        <tr>
-            <td>School Name</td>
-            <td><input type="text" placeholder="School Name"></td>
-        </tr>
-        <tr>
-            <td>City | State</td>
-            <td><input type="text" placeholder="City | State"></td>
-        </tr>
-        <tr>
-            <td>Dates Attended Month/Year (From)</td>
-            <td><input type="text" placeholder="Month/Year"></td>
-        </tr>
-        <tr>
-            <td>Dates Attended Month/Year (To)</td>
-            <td><input type="text" placeholder="Month/Year"></td>
-        </tr>
-        <tr>
-            <td>Did you Graduate?</td>
-            <td>
-                <label><input type="radio"> Yes</label>
-                <label><input type="radio"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <td>If no, # of years left to graduate</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Degree received</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Major</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Other credentials</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <th colspan="2">EMPLOYMENT HISTORY (Begin with Most Recent Employment)</th>
-        </tr>
-        <tr>
-            <td class="required">Employer #1 (Company Name)</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td class="required">Job Title & Duties</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td class="required">From</td>
-            <td><input type="date"></td>
-        </tr>
-        <tr>
-            <td class="required">To</td>
-            <td><input type="date"></td>
-        </tr>
-        <tr>
-            <td class="required">Supervisor's Name</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td class="required">Phone</td>
-            <td><input type="tel"></td>
-        </tr>
-        <tr>
-            <td class="required">Address</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Reason for leaving</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>May We Contact This Employer?</td>
-            <td>
-                <label><input type="radio"> Yes</label>
-                <label><input type="radio"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <td>Employer #2 (Company Name)</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Job Title & Duties</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>From</td>
-            <td><input type="date"></td>
-        </tr>
-        <tr>
-            <td>To</td>
-            <td><input type="date"></td>
-        </tr>
-        <tr>
-            <td>Supervisor's Name</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Phone</td>
-            <td><input type="tel"></td>
-        </tr>
-        <tr>
-            <td>Address</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Reason for leaving</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>May We Contact This Employer?</td>
-            <td>
-                <label><input type="radio"> Yes</label>
-                <label><input type="radio"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <td>Employer #3 (Company Name)</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Job Title & Duties</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>From</td>
-            <td><input type="date"></td>
-        </tr>
-        <tr>
-            <td>To</td>
-            <td><input type="date"></td>
-        </tr>
-        <tr>
-            <td>Supervisor's Name</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Phone</td>
-            <td><input type="tel"></td>
-        </tr>
-        <tr>
-            <td>Address</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>Reason for leaving</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td>May We Contact This Employer?</td>
-            <td>
-                <label><input type="radio"> Yes</label>
-                <label><input type="radio"> No</label>
-            </td>
-        </tr>
-        <tr>
-            <th colspan="2">REFERENCES</th>
-        </tr>
-        <tr>
-            <td class="required">Name</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td class="required">Phone #</td>
-            <td><input type="tel"></td>
-        </tr>
-        <tr>
-            <td class="required">Address</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td class="required">Occupation</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td class="required">The information on this application is true, and accurate to the best of my knowledge.</td>
-            <td><label><input type="checkbox" required> I agree</label></td>
-        </tr>
-        <tr>
-            <td class="required">Full Name</td>
-            <td><input type="text"></td>
-        </tr>
-        <tr>
-            <td class="required">Date</td>
-            <td><input type="date"></td>
-        </tr>
-        <tr>
-            <td class="required">Signature</td>
-            <td class="signature-upload">
-                <input type="file" accept="image/*" id="signatureUpload">
-                <label for="signatureUpload">Upload Signature</label>
-            </td>
-        </tr>
-    </table>
-    <button type="button" class="submit-btn">Submit Application</button>
-</div>
+    <div class="banner">
+        <h1>Apply Online</h1>
+    </div>
 
+    <section class="application-section">
+        <h2>Application For Employment: MOFEY HOME CARE LLC</h2>
+        <p>
+            Mofey Home Care LLC is an Equal Opportunity Employer. Employment offers are made on the basis of
+            qualifications, and without regard to race, sex, religion, national or ethnic origin, disability, age,
+            veteran status, or sexual orientation.
+        </p>
+        <p>
+            Please complete this employment application form for consideration. We strongly suggest proof-reading your
+            application before clicking the submit button. We look forward to working with you!
+        </p>
+    </section>
+
+    <form action="/submit-application" method="post">
+        <fieldset>
+            <legend><strong>PERSONAL INFORMATION</strong></legend>
+            First Name*: <input type="text" name="first_name" required><br>
+            Middle Name: <input type="text" name="middle_name"><br>
+            Last Name*: <input type="text" name="last_name" required><br>
+            Other Names Used: <input type="text" name="other_names"><br>
+            Address*: <input type="text" name="address" required><br>
+            City*: <input type="text" name="city" required><br>
+            State / Province*: <input type="text" name="state" required><br>
+            Postal / Zip Code*: <input type="text" name="postal_code" required><br>
+            Email Address*: <input type="email" name="email" required><br>
+            Phone Number*: <input type="tel" name="phone" required><br>
+            Are you legally entitled to work in the U.S.?*:
+            <input type="radio" name="work_legally" value="Yes" required> Yes
+            <input type="radio" name="work_legally" value="No"> No<br>
+            Have you ever been convicted of a felony*:
+            <input type="radio" name="convicted" value="Yes" required> Yes
+            <input type="radio" name="convicted" value="No"> No<br>
+            Are you 18 Years of age or older*:
+            <input type="radio" name="over_18" value="Yes" required> Yes
+            <input type="radio" name="over_18" value="No"> No<br>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>SPECIAL SKILLS</strong></legend>
+            Special Skills you have to offer for this position:<br>
+            <textarea name="special_skills" rows="4" cols="50"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>EMPLOYMENT HISTORY</strong></legend>
+            <h4>Employer #1</h4>
+            Company Name*: <input type="text" name="employer1_name" required><br>
+            Job Title & Duties*: <input type="text" name="employer1_job_title" required><br>
+            From*: <input type="date" name="employer1_from" required><br>
+            To*: <input type="date" name="employer1_to" required><br>
+            Supervisor's Name*: <input type="text" name="employer1_supervisor" required><br>
+            Phone*: <input type="tel" name="employer1_phone" required><br>
+            Address*: <input type="text" name="employer1_address" required><br>
+            Reason for leaving: <textarea name="employer1_reason" rows="2" cols="50"></textarea><br>
+            May We Contact This Employer?:
+            <input type="radio" name="employer1_contact" value="Yes"> Yes
+            <input type="radio" name="employer1_contact" value="No"> No<br>
+
+            <h4>Employer #2</h4>
+            Company Name: <input type="text" name="employer2_name"><br>
+            Job Title & Duties: <input type="text" name="employer2_job_title"><br>
+            From: <input type="date" name="employer2_from"><br>
+            To: <input type="date" name="employer2_to"><br>
+            Supervisor's Name: <input type="text" name="employer2_supervisor"><br>
+            Phone: <input type="tel" name="employer2_phone"><br>
+            Address: <input type="text" name="employer2_address"><br>
+            Reason for leaving: <textarea name="employer2_reason" rows="2" cols="50"></textarea><br>
+            May We Contact This Employer?:
+            <input type="radio" name="employer2_contact" value="Yes"> Yes
+            <input type="radio" name="employer2_contact" value="No"> No<br>
+
+            <h4>Employer #3</h4>
+            Company Name: <input type="text" name="employer3_name"><br>
+            Job Title & Duties: <input type="text" name="employer3_job_title"><br>
+            From: <input type="date" name="employer3_from"><br>
+            To: <input type="date" name="employer3_to"><br>
+            Supervisor's Name: <input type="text" name="employer3_supervisor"><br>
+            Phone: <input type="tel" name="employer3_phone"><br>
+            Address: <input type="text" name="employer3_address"><br>
+            Reason for leaving: <textarea name="employer3_reason" rows="2" cols="50"></textarea><br>
+            May We Contact This Employer?:
+            <input type="radio" name="employer3_contact" value="Yes"> Yes
+            <input type="radio" name="employer3_contact" value="No"> No<br>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>REFERENCES</strong></legend>
+            <p>Give names of three Persons NOT related to you. Two of your References MUST be supervisory or
+                Professional</p>
+            <h4>Reference #1</h4>
+            Name: <input type="text" name="reference1_name"><br>
+            Phone #: <input type="tel" name="reference1_phone"><br>
+            Address: <input type="text" name="reference1_address"><br>
+            Occupation: <input type="text" name="reference1_occupation"><br>
+
+            <h4>Reference #2</h4>
+            Name: <input type="text" name="reference2_name"><br>
+            Phone #: <input type="tel" name="reference2_phone"><br>
+            Address: <input type="text" name="reference2_address"><br>
+            Occupation: <input type="text" name="reference2_occupation"><br>
+
+            <h4>Reference #3</h4>
+            Name: <input type="text" name="reference3_name"><br>
+            Phone #: <input type="tel" name="reference3_phone"><br>
+            Address: <input type="text" name="reference3_address"><br>
+            Occupation: <input type="text" name="reference3_occupation"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>DECLARATION</strong></legend>
+            <input type="checkbox" name="declaration" required> The information on this application is true, and
+            accurate to the best of my knowledge.*<br>
+            Full Name*: <input type="text" name="full_name" required><br>
+            Signature*: <input type="text" name="signature" required><br>
+            Date*: <input type="date" name="date" required><br>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-primary text-white p-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Mofey Home Care is dedicated to providing reliable home care services in Indiana and surrounding
+                        areas.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Navigation Menu</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="services.html" class="text-white">Services</a></li>
+                        <li><a href="applyv.html" class="text-white">Apply Online</a></li>
+                        <li><a href="contact.html" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 ">
+                    <h5>Contact Details</h5>
+                    <p>
+                        <strong><img src="images/map-icon.png">&nbsp;</span>Address:</strong> 369 Damsing St, Danville,
+                        IN, 46122<br><br>
+                        <strong><img src="images/mail-icon.png">&nbsp; <a href="mailto:Folashadefaturoti@gmail.com"
+                                style="color: white;"> Email:</strong> mofeyhomecare@gmail.com</a><br><br>
+                        <strong><img src="images/call-icon.png">&nbsp; <a href="tel:317-625-9720"
+                                style="color: white;">Phone:</strong> 317-625-9720</a>
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                &copy; 2024 Mofey Home Care LLC. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function () {
+            document.getElementById('nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+    </script>
 </body>
+
 </html>

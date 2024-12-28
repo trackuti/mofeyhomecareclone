@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mofey Home Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        te nav {
+            display: flex;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 10px;
+            font-weight: bold;
+            font-size: large;
+        }
+        
+        nav a:hover {
+            color: #007BFF;
+        }
+        
+        .hero-section {
+            background: url('./images/main.jpg') no-repeat center center/cover;
+            width: 100%;
+            height: 700px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 100px;
+            font-weight: bold;
+        }
+        
+        .card img {
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        #navbarNav {
+            /* margin-left: 23em; */
+            margin-right: 0px;
+        }
+
+    /* Banner Styles */
+    .banner {
+        position: relative;
+        background-image: url(/images/applyonline.jpg); /* Add your background image path */
+        background-size: cover;
+        background-position: center;
+        height: 400px; /* Adjust height as needed */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    /* Form Styles */
+    form {
+        width: 80%;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    fieldset {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    legend {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin: 10px 0;
+        transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    input[type="date"]:focus,
+    textarea:focus,
+    select:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    .required:after {
+        content: " *";
+        color: red;
+    }
+
+    /* Responsive Design for the Form */
+    @media (max-width: 768px) {
+        .banner h1 {
+            font-size: 2rem;
+        }
+
+        form {
+            width: 95%;
+            padding: 15px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/images/sitelogo.png" alt="Logo" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About Us</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="apply.html" class="nav-item">Apply Online</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <div class="banner">
+        <h1>Apply Online</h1>
+    </div>
+<center>
+    <section class="application-section">
+        <h2>Application For Employment: MOFEY HOME CARE LLC</h2>
+        <p>
+            Mofey Home Care LLC is an Equal Opportunity Employer. Employment offers are made on the basis of
+            qualifications, and without regard to race, sex, religion, national or ethnic origin, disability, age,
+            veteran status, or sexual orientation.
+        </p>
+        <p>
+            Please complete this employment application form for consideration. We strongly suggest proof-reading your
+            application before clicking the submit button. We look forward to working with you!
+        </p>
+    </section>
+
+</center>
+   
+    <form action="/submit-application" method="post">
+        <fieldset>
+            <legend><strong>PERSONAL INFORMATION</strong></legend>
+            First Name*: <input type="text" name="first_name" required><br>
+            Middle Name: <input type="text" name="middle_name"><br>
+            Last Name*: <input type="text" name="last_name" required><br>
+            Other Names Used: <input type="text" name="other_names"><br>
+            Address*: <input type="text" name="address" required><br>
+            City*: <input type="text" name="city" required><br>
+            State / Province*: <input type="text" name="state" required><br>
+            Postal / Zip Code*: <input type="text" name="postal_code" required><br>
+            Email Address*: <input type="email" name="email" required><br>
+            Phone Number*: <input type="tel" name="phone" required><br>
+            Are you legally entitled to work in the U.S.?*:
+            <input type="radio" name="work_legally" value="Yes" required> Yes
+            <input type="radio" name="work_legally" value="No"> No<br>
+            Have you ever been convicted of a felony*:
+            <input type="radio" name="convicted" value="Yes" required> Yes
+            <input type="radio" name="convicted" value="No"> No<br>
+            Are you 18 Years of age or older*:
+            <input type="radio" name="over_18" value="Yes" required> Yes
+            <input type="radio" name="over_18" value="No"> No<br>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>SPECIAL SKILLS</strong></legend>
+            Special Skills you have to offer for this position:<br>
+            <textarea name="special_skills" rows="4" cols="50"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>EMPLOYMENT HISTORY</strong></legend>
+            <h4>Employer #1</h4>
+            Company Name*: <input type="text" name="employer1_name" required><br>
+            Job Title & Duties*: <input type="text" name="employer1_job_title" required><br>
+            From*: <input type="date" name="employer1_from" required><br>
+            To*: <input type="date" name="employer1_to" required><br>
+            Supervisor's Name*: <input type="text" name="employer1_supervisor" required><br>
+            Phone*: <input type="tel" name="employer1_phone" required><br>
+            Address*: <input type="text" name="employer1_address" required><br>
+            Reason for leaving: <textarea name="employer1_reason" rows="2" cols="50"></textarea><br>
+            May We Contact This Employer?:
+            <input type="radio" name="employer1_contact" value="Yes"> Yes
+            <input type="radio" name="employer1_contact" value="No"> No<br>
+
+            <h4>Employer #2</h4>
+            Company Name: <input type="text" name="employer2_name"><br>
+            Job Title & Duties: <input type="text" name="employer2_job_title"><br>
+            From: <input type="date" name="employer2_from"><br>
+            To: <input type="date" name="employer2_to"><br>
+            Supervisor's Name: <input type="text" name="employer2_supervisor"><br>
+            Phone: <input type="tel" name="employer2_phone"><br>
+            Address: <input type="text" name="employer2_address"><br>
+            Reason for leaving: <textarea name="employer2_reason" rows="2" cols="50"></textarea><br>
+            May We Contact This Employer?:
+            <input type="radio" name="employer2_contact" value="Yes"> Yes
+            <input type="radio" name="employer2_contact" value="No"> No<br>
+
+            <h4>Employer #3</h4>
+            Company Name: <input type="text" name="employer3_name"><br>
+            Job Title & Duties: <input type="text" name="employer3_job_title"><br>
+            From: <input type="date" name="employer3_from"><br>
+            To: <input type="date" name="employer3_to"><br>
+            Supervisor's Name: <input type="text" name="employer3_supervisor"><br>
+            Phone: <input type="tel" name="employer3_phone"><br>
+            Address: <input type="text" name="employer3_address"><br>
+            Reason for leaving: <textarea name="employer3_reason" rows="2" cols="50"></textarea><br>
+            May We Contact This Employer?:
+            <input type="radio" name="employer3_contact" value="Yes"> Yes
+            <input type="radio" name="employer3_contact" value="No"> No<br>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>REFERENCES</strong></legend>
+            <p>Give names of three Persons NOT related to you. Two of your References MUST be supervisory or
+                Professional</p>
+            <h4>Reference #1</h4>
+            Name: <input type="text" name="reference1_name"><br>
+            Phone #: <input type="tel" name="reference1_phone"><br>
+            Address: <input type="text" name="reference1_address"><br>
+            Occupation: <input type="text" name="reference1_occupation"><br>
+
+            <h4>Reference #2</h4>
+            Name: <input type="text" name="reference2_name"><br>
+            Phone #: <input type="tel" name="reference2_phone"><br>
+            Address: <input type="text" name="reference2_address"><br>
+            Occupation: <input type="text" name="reference2_occupation"><br>
+
+            <h4>Reference #3</h4>
+            Name: <input type="text" name="reference3_name"><br>
+            Phone #: <input type="tel" name="reference3_phone"><br>
+            Address: <input type="text" name="reference3_address"><br>
+            Occupation: <input type="text" name="reference3_occupation"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend><strong>DECLARATION</strong></legend>
+            <input type="checkbox" name="declaration" required> The information on this application is true, and
+            accurate to the best of my knowledge.*<br>
+            Full Name*: <input type="text" name="full_name" required><br>
+            Signature*: <input type="text" name="signature" required><br>
+            Date*: <input type="date" name="date" required><br>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="container py-4">
+            <div class="row">
+                <div class=" col-md-4 ">
+                    <h5>About Us</h5>
+                    <p>Mofey Home Care is dedicated to providing reliable home care services in Indiana and surrounding areas.</p>
+                    <a href="# " class="btn btn-light btn-sm ">Learn More</a>
+                </div>
+                <div class="col-md-4 ">
+                    <h5>Navigation Menu</h5>
+                    <ul class="list-unstyled ">
+                        <li><a href="index.html" class="text-white text-decoration-none ">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none ">About Us</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none ">Services</a></li>
+                        <li><a href="apply.html" class="text-white text-decoration-none ">Apply Online</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none ">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 ">
+                    <h5>Contact Details</h5>
+                    <p>
+                        <strong><img src="images/map-icon.png">&nbsp;</span>Address:</strong> 369 Damsing St, Danville, IN, 46122<br><br>
+                        <strong><img src="images/mail-icon.png">&nbsp; <a href="mailto:Folashadefaturoti@gmail.com" style="color: white;"> Email:</strong> mofeyhomecare@gmail.com</a><br><br>
+                        <strong><img src="images/call-icon.png" >&nbsp; <a href="tel:317-625-9720" style="color: white;">Phone:</strong> 317-625-9720</a>
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-3 ">
+                <p>&copy; 2024 Mofey Home Care LLC - All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js "></script>
+</body>
+
+</html>

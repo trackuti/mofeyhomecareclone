@@ -1,46 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mofey Home Care</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body {
+            background-color: white;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        te nav {
+            display: flex;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 10px;
+            font-weight: bold;
+            font-size: large;
+        }
+        
+        nav a:hover {
+            color: #007BFF;
+        }
+        
         .hero-section {
-            background: url('hero-image.jpg') no-repeat center center/cover;
-            height: 400px;
+            background: url('./images/main.jpg') no-repeat center center/cover;
+            width: 100%;
+            height: 700px;
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
+            font-size: 100px;
+            font-weight: bold;
         }
+        
         .card img {
             height: 150px;
             object-fit: cover;
         }
+        
+        #navbarNav {
+            /* margin-left: 15em; */
+            margin-right: 0px;
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="Logo" height="40">
-                Mofey Home Care
+                <img src="/images/sitelogo.png" alt="Logo" height="100">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Apply Online</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                </ul>
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About Us</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="applyv.html" class="nav-item">Apply Online</a>
+                <a href="contact.html" class="nav-item">Contact</a>
             </div>
         </div>
     </nav>
@@ -48,8 +80,8 @@
     <!-- Hero Section -->
     <div class="hero-section">
         <div class="container">
-            <h1>Indiana and Surrounding Cities Quality Home Care Services Provider</h1>
-            <a href="#" class="btn btn-primary mt-3">Learn More</a>
+            <h1 style="font-size: 75px;">Indiana and Surrounding Cities Quality Home Care Services Provider</h1>
+            <a href="about.html" class="btn btn-primary mt-3" style="border-radius: 20px;" style="background-color: rgb(132, 0, 255);"><strong>Learn More</strong></a>
         </div>
     </div>
 
@@ -58,8 +90,7 @@
         <div class="container">
             <h2>Welcome To Mofey Home Care</h2>
             <p class="mt-3">
-                As a trusted provider of home care services, our aim is to empower aging adults and people with disabilities
-                by providing personalized services. These help them remain independent, safe, and comfortable in their own homes.
+                As a trusted provider of home care services, our aim is to empower aging adults and people with disabilities by providing personalized services. These help them remain independent, safe, and comfortable in their own homes.
             </p>
         </div>
     </section>
@@ -72,7 +103,7 @@
                 <!-- Service Cards -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="personal-care.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <img src="images/personal-care.jpg" class="card-img-top" alt="Personal Care Assistance">
                         <div class="card-body">
                             <h5 class="card-title">Personal Care Assistance</h5>
                             <p class="card-text">Helping clients with activities of daily living such as bathing, grooming, and mobility support.</p>
@@ -81,7 +112,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="attendant-care.jpg" class="card-img-top" alt="Attendant Care Services">
+                        <img src="images/attendant-care.jpg" class="card-img-top" alt="Attendant Care Services">
                         <div class="card-body">
                             <h5 class="card-title">Attendant Care Services</h5>
                             <p class="card-text">Providing companionship and ensuring safety for our clients at home.</p>
@@ -90,10 +121,149 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="companion-care.jpg" class="card-img-top" alt="Companion Care">
+                        <img src="images/companion-care.jpg" class="card-img-top" alt="Companion Care">
                         <div class="card-body">
                             <h5 class="card-title">Companion Care</h5>
                             <p class="card-text">Engaging with clients through conversation and companionship to improve their quality of life.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Home-Making-Service.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Home Making Service</h5>
+                            <p class="card-text">Mofey Home Care provides home-making services in Indiana and surrounding areas. These services offer direct and practical assistance with household tasks. As a result, individuals can maintain a clean, safe, and healthy environment
+                                at home. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Errand-Runner-Services.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Errand Runner Services</h5>
+                            <p class="card-text">For seniors, running errands can be time-consuming and complicated. Mofey Home Care helps by either completing the tasks for you or taking you to the location to complete them yourself.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Senior-Care.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Senior Care</h5>
+                            <p class="card-text">With Mofey Home Care, seniors can enjoy the comforts of their own homes. Families gain peace of mind knowing their loved ones are in good hands while staying at home.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Day-Habilitation.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Day Habilitation</h5>
+                            <p class="card-text">We help people build relationships and provide natural support in one-on-one or small group settings. Mofey Home Care creates support systems that encourage independence for adults with disabilities. We design a wide range
+                                of activities and therapies to meet each individual’s personal needs and goals in collaboration with them and their families.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Home-Delivered-Meals.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Home Delivered Meals</h5>
+                            <p class="card-text">Delicious, nutritious, and delivered with care! Mofey Home Care offers home-delivered meals to keep you healthy and happy. Freshly prepared and tailored to your needs, they are always on time because you deserve comfort and
+                                convenience at every meal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Community-Transition.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Community Transition</h5>
+                            <p class="card-text">Transitioning into a new community can be a significant life change. Our community transition services focus on making this process smooth and positive. We work closely with individuals to help them integrate seamlessly into
+                                communities where they are valued and respected.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Residential-Habilitation-Services.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Residential Habilitation Services (RHS)</h5>
+                            <p class="card-text">Residential Habilitation and Support Services (RHS) provide up to a full day (24-hour basis) of services and/or supports which are designed to ensure the health, safety, and welfare of the client, and assist in the acquisition,
+                                improvement, and retention of skills necessary to support participants to live successfully in their own homes (with family, apartment, or housemates).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Participant-Assistance-and-Care.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Participant Assistance and Care (PAC)</h5>
+                            <p class="card-text">Participant Assistance and Care (PAC) services are provided to allow participants with intellectual/developmental disabilities to remain and live successfully in their own homes, function and participate in their communities,
+                                and avoid institutionalization. PAC services support and enable the participant in activities of daily living, self-care, and mobility with the hands-on assistance, prompting, reminders, supervision, and monitoring needed
+                                to ensure the health, safety, and welfare of the participant.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Respite-Care.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Respite Care</h5>
+                            <p class="card-text">Respite care is temporary relief care designed for families of children or adults with special needs. Respite provides a short period of rest or relief for a person's primary caregiver. Respite care can range from a few hours
+                                of care provided on a one-time basis to overnight or extended care sessions. Respite care can be utilized on a regular or irregular basis and can be provided by family members, friends, skilled care providers, or professionals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Transportation.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Transportation</h5>
+                            <p class="card-text">Mofey Home Care's transportation services allow loved ones to travel wherever they want without having to drive, travel alone, or rely on public transportation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Structured-Family-Caregiving.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Structured Family Caregiving</h5>
+                            <p class="card-text">With Structured Family Caregiving, one or more close friends or family members can provide in-home care for your loved one while providing a safe environment and tailored care that is suited to the individual's needs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Caregiving-Coaching-and-Behavioral Management.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Caregiving coaching and behavioral management</h5>
+                            <p class="card-text">Empowering caregivers to make a difference. At Mofey Home Care, we specialize in caregiving coaching and behavioral management to ensure compassionate and effective care. Supporting families, enhancing skills, and improving
+                                lives every step of the way. Together, we create a brighter tomorrow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/Family-&-Caregiver-Training.jpg" class="card-img-top" alt="Personal Care Assistance">
+                        <div class="card-body">
+                            <h5 class="card-title">Family & Caregiver training</h5>
+                            <p class="card-text">Strong families, confident caregivers. Mofey Home Care offers tailored training to empower families and caregivers with the skills they need. Learn how to provide compassionate, effective care for your loved ones. Together,
+                                we create a supportive and nurturing environment.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -106,36 +276,37 @@
     <footer class="bg-primary text-white">
         <div class="container py-4">
             <div class="row">
-                <div class="col-md-4">
+                <div class=" col-md-4 ">
                     <h5>About Us</h5>
                     <p>Mofey Home Care is dedicated to providing reliable home care services in Indiana and surrounding areas.</p>
-                    <a href="#" class="btn btn-light btn-sm">Learn More</a>
+                    <a href="# " class="btn btn-light btn-sm ">Learn More</a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 ">
                     <h5>Navigation Menu</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Services</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Apply Online</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    <ul class="list-unstyled ">
+                        <li><a href="index.html" class="text-white text-decoration-none ">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none ">About Us</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none ">Services</a></li>
+                        <li><a href="applyv.html" class="text-white text-decoration-none ">Apply Online</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none ">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 ">
                     <h5>Contact Details</h5>
                     <p>
-                        <strong>Address:</strong> 369 Damsing St, Danville, IN, 46122<br>
-                        <strong>Email:</strong> mofeyhomecare@gmail.com<br>
-                        <strong>Phone:</strong> 317-625-9720
+                        <strong><img src="images/map-icon.png">&nbsp;</span>Address:</strong> 369 Damsing St, Danville, IN, 46122<br><br>
+                        <strong><img src="images/mail-icon.png">&nbsp; <a href="mailto:Folashadefaturoti@gmail.com" style="color: white;"> Email:</strong> mofeyhomecare@gmail.com</a><br><br>
+                        <strong><img src="images/call-icon.png" >&nbsp; <a href="tel:317-625-9720" style="color: white;">Phone:</strong> 317-625-9720</a>
                     </p>
                 </div>
             </div>
-            <div class="text-center mt-3">
+            <div class="text-center mt-3 ">
                 <p>&copy; 2024 Mofey Home Care LLC - All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js "></script>
 </body>
+
 </html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mofey Home Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: white;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        te nav {
+            display: flex;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 10px;
+            font-weight: bold;
+            font-size: large;
+        }
+        
+        nav a:hover {
+            color: #007BFF;
+        }
+        
+        .hero-section {
+            background: url('./images/main.jpg') no-repeat center center/cover;
+            width: 100%;
+            height: 700px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 100px;
+            font-weight: bold;
+        }
+        
+        .card img {
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        #navbarNav {
+            /* margin-left: 15em; */
+            margin-right: 0px;
+        }
+
+    /* Hero Section Styles */
+    .hero {
+        text-align: center;
+        color: white;
+        height: 400px;
+        background: url('/images/contactus.jpg') no-repeat center center/cover;
+    }
+
+    .hero h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        font-weight: bold;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        margin: 0;
+    }
+
+    /* Contact Section Styles */
+    .contact-section {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 20px;
+        flex-wrap: wrap;
+        background-color: #f9f9f9;
+    }
+
+    .contact-details {
+        width: 48%;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-details h2 {
+        font-size: 2rem;
+        color: #333;
+    }
+
+    .contact-details p {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .contact-details ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .contact-details li {
+        font-size: 1rem;
+        color: #555;
+        margin: 10px 0;
+    }
+
+    .contact-details li i {
+        margin-right: 10px;
+        color: #007bff;
+    }
+
+    .contact-details h3 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+        color: #333;
+    }
+
+    /* Contact Form Styles */
+    .contact-form {
+        width: 48%;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form h2 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .contact-form label {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    .contact-form textarea {
+        resize: vertical;
+    }
+
+    .contact-form button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-form button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .contact-section {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .contact-details,
+        .contact-form {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/images/sitelogo.png" alt="Logo" height="100">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="about.html" class="nav-item">About Us</a>
+                <a href="services.html" class="nav-item">Services</a>
+                <a href="applyv.html" class="nav-item">Apply Online</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <img src="/images/contactus.jpg" alt="Contact Us">
+        <h1>Contact Us</h1>
+    </div>
+
+    <section class="contact-section">
+        <div class="contact-details">
+            <h2>Contact Us</h2>
+            <p>For a customized consultation on home care services, contact our team or fill the form below.</p>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i>3989 Canning St, Danville, IN, 46122</li>
+                <li><i class="fas fa-envelope"></i>mofeyhomecare@gmail.com</li>
+                <li><i class="fas fa-phone"></i>317-551-2736</li>
+            </ul>
+
+            <h3>Business Hours</h3>
+            <ul>
+                <li>Monday - Friday: 8AM - 5PM</li>
+                <li>Saturday - Sunday: On Call 24/7</li>
+            </ul>
+        </div>
+
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form>
+                <label for="name">Name </label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email </label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <label for="services">Services Needed</label>
+                <select id="services" name="services">
+                    <option>Personal Care Assistance</option>
+                    <option>Attendant Care Services</option>
+                    <option>Companion Care</option>
+                    <option>Home Making Services</option>
+                </select>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="container py-4">
+            <div class="row">
+                <div class=" col-md-4 ">
+                    <h5>About Us</h5>
+                    <p>Mofey Home Care is dedicated to providing reliable home care services in Indiana and surrounding areas.</p>
+                    <a href="# " class="btn btn-light btn-sm ">Learn More</a>
+                </div>
+                <div class="col-md-4 ">
+                    <h5>Navigation Menu</h5>
+                    <ul class="list-unstyled ">
+                        <li><a href="index.html" class="text-white text-decoration-none ">Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none ">About Us</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none ">Services</a></li>
+                        <li><a href="applyv.html" class="text-white text-decoration-none ">Apply Online</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none ">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 ">
+                    <h5>Contact Details</h5>
+                    <p>
+                        <strong><img src="images/map-icon.png">&nbsp;</span>Address:</strong> 369 Damsing St, Danville, IN, 46122<br><br>
+                        <strong><img src="images/mail-icon.png">&nbsp; <a href="mailto:Folashadefaturoti@gmail.com" style="color: white;"> Email:</strong> mofeyhomecare@gmail.com</a><br><br>
+                        <strong><img src="images/call-icon.png" >&nbsp; <a href="tel:317-625-9720" style="color: white;">Phone:</strong> 317-625-9720</a>
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-3 ">
+                <p>&copy; 2024 Mofey Home Care LLC - All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js "></script>
+</body>
+
+</html>
