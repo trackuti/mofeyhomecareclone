@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #333;
+        }
+
+        #display {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .buttons button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #start { background-color: #4CAF50; color: white; }
+        #start:hover { background-color: #45a049; }
+
+        #stop { background-color: #f44336; color: white; }
+        #stop:hover { background-color: #e53935; }
+
+        #reset { background-color: #008CBA; color: white; }
+        #reset:hover { background-color: #007bb5; }
+        
+        #record { background-color: #f0ad4e; color: white; }
+        #record:hover { background-color: #ec971f; }
+
+        .records {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .records h2 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .records ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .records li {
+            font-size: 1.2em;
+            color: #555;
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stopwatch</h1>
+        <div id="display">00:00:00</div>
+        <div class="buttons">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+            <button id="record">Record Lap</button>
+        </div>
+        <div class="records">
+            <h2>Lap Times:</h2>
+            <ul id="lapTimes"></ul>
+        </div>
+    </div>
+    <script>
+        let timer;
+        let running = false;
+        let elapsedSeconds = 0;
+        let lapCounter = 0;
+
+        const display = document.getElementById('display');
+        const startButton = document.getElementById('start');
+        const stopButton = document.getElementById('stop');
+        const resetButton = document.getElementById('reset');
+        const recordButton = document.getElementById('record');
+        const lapTimes = document.getElementById('lapTimes');
+
+        function updateDisplay() {
+            const hours = Math.floor(elapsedSeconds / 3600);
+            const minutes = Math.floor((elapsedSeconds % 3600) / 60);
+            const seconds = elapsedSeconds % 60;
+            display.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        function start() {
+            if (!running) {
+                running = true;
+                timer = setInterval(() => {
+                    elapsedSeconds++;
+                    updateDisplay();
+                }, 1000);
+            }
+        }
+
+        function stop() {
+            running = false;
+            clearInterval(timer);
+        }
+
+        function reset() {
+            running = false;
+            clearInterval(timer);
+            elapsedSeconds = 0;
+            updateDisplay();
+            lapTimes.innerHTML = '';
+            lapCounter = 0;
+        }
+
+        function recordLap() {
+            lapCounter++;
+            const lapTime = display.textContent;
+            const li = document.createElement('li');
+            li.textContent = `Lap ${lapCounter}: ${lapTime}`;
+            lapTimes.appendChild(li);
+        }
+
+        startButton.addEventListener('click', start);
+        stopButton.addEventListener('click', stop);
+        resetButton.addEventListener('click', reset);
+        recordButton.addEventListener('click', recordLap);
+
+        updateDisplay();
+    </script>
+</body>
+</html>
